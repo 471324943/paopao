@@ -1,9 +1,10 @@
-package com.czxy.paopao.service.impl;
+package com.czxy.paopao.service;
 
+import com.czxy.paopao.domain.User;
 import org.apache.dubbo.config.annotation.Service;
 import javax.annotation.Resource;
 import com.czxy.paopao.mapper.UserMapper;
-import com.czxy.paopao.service.UserService;
+
 
 @Service(version = "1.0.0")
 public class UserServiceImpl implements UserService{
@@ -12,5 +13,7 @@ public class UserServiceImpl implements UserService{
     private UserMapper userMapper;
 
 
-
+    public User findById(Integer id) {
+        return userMapper.selectByPrimaryKey(id);
+    }
 }

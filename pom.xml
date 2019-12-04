@@ -11,7 +11,10 @@
     </parent>
     <modules>
         <module>dependency</module>
-        <module>user-service</module>
+        <module>commons</module>
+        <module>configuration</module>
+        <module>gateway</module>
+        <module>user</module>
     </modules>
     <groupId>com.czxy</groupId>
     <artifactId>paopao</artifactId>
